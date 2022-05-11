@@ -7,7 +7,7 @@ public class Git {
 	}
 	//https://github.com/yogeshjankar/Automation.git
 	
-	//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
+	//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
 	
 	
 	

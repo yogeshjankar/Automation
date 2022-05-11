@@ -1,4 +1,4 @@
-package robot;
+package robotClass;
 
 import java.awt.AWTException;
 import java.awt.Robot;
