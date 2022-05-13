@@ -1,4 +1,4 @@
-package assignments;
+package xpath;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
