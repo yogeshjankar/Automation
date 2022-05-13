@@ -1,4 +1,4 @@
-package actionsClass;
+package mouseActions;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class RightClick {
+public class DoubleClick {
 
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
@@ -19,15 +19,9 @@ public class RightClick {
 		driver.get("https://demo.guru99.com/test/simple_context_menu.html");
 		driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
 		
-		WebElement target = driver.findElement(By.xpath("//span[.='right click me']"));
+		WebElement target = driver.findElement(By.xpath("//button[.='Double-Click Me To See Alert']"));
 		Actions act = new Actions(driver);
-		act.contextClick(target).perform();
-		
-
-		
-		//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
-		
-
+		act.doubleClick(target).perform();
 
 
 

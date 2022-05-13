@@ -1,4 +1,4 @@
-package actionsClass;
+package mouseActions;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class MoveToElement {
+public class RightClick {
 
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
@@ -16,13 +16,18 @@ public class MoveToElement {
 		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.bluestone.com/");
+		driver.get("https://demo.guru99.com/test/simple_context_menu.html");
 		driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
-
-		driver.findElement(By.id("denyBtn")).click();
-		WebElement target = driver.findElement(By.xpath("//a[@title='Rings' and .='Rings ']"));
+		
+		WebElement target = driver.findElement(By.xpath("//span[.='right click me']"));
 		Actions act = new Actions(driver);
-		act.moveToElement(target).perform();
+		act.contextClick(target).perform();
+		
+
+		
+		//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
+		
+
 
 
 

@@ -1,4 +1,4 @@
-package robotClass;
+package keyboardActions;
 
 import java.awt.AWTException;
 import java.awt.Robot;

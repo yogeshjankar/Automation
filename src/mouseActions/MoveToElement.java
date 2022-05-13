@@ -1,4 +1,4 @@
-package actionsClass;
+package mouseActions;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class DoubleClick {
+public class MoveToElement {
 
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
@@ -16,12 +16,13 @@ public class DoubleClick {
 		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://demo.guru99.com/test/simple_context_menu.html");
+		driver.get("https://www.bluestone.com/");
 		driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);
-		
-		WebElement target = driver.findElement(By.xpath("//button[.='Double-Click Me To See Alert']"));
+
+		driver.findElement(By.id("denyBtn")).click();
+		WebElement target = driver.findElement(By.xpath("//a[@title='Rings' and .='Rings ']"));
 		Actions act = new Actions(driver);
-		act.doubleClick(target).perform();
+		act.moveToElement(target).perform();
 
 
 
