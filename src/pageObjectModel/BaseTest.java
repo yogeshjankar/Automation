@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BaseTest {
+public class BaseTest implements IAutoConstant {
 	
 	static WebDriver driver;
 	
@@ -15,25 +15,25 @@ public class BaseTest {
 	public void setUp() throws IOException
 	{
 		Flib flib = new Flib();
-		String browserValue = flib.readPropertyFile("./data/config.properties", "browser");
-		String url = flib.readPropertyFile("./data/config.properties", "url");
+		String browserValue = flib.readPropertyFile(PROP_PATH, "browser");
+		String url = flib.readPropertyFile(PROP_PATH, "url");
 		
 		if(browserValue.equalsIgnoreCase("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+			System.setProperty(CHROME_KEY, CHROME_VALUE);
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get(url);
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		}
 		
 		else if(browserValue.equalsIgnoreCase("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+			System.setProperty(GECKO_KEY, GECKO_VALUE);
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 			driver.get(url);
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		}
 		
 		else
@@ -43,7 +43,7 @@ public class BaseTest {
 	}
 	
 	public void tearDown() {
-		driver.close();
+		driver.quit();
 	}
 
 }

@@ -12,6 +12,7 @@ public class HomePage {
 	@FindBy(xpath = "//a[.='Logout']") private WebElement logoutLink;
 	@FindBy(xpath = "//a[.='Create new tasks']") private WebElement createNewTasks;
 	@FindBy(xpath = "//div[.='Settings']") private WebElement setings;
+	@FindBy(id = "SubmitTTButton") private WebElement saveLeaveTimeBtn;
 
 	
 	
@@ -22,9 +23,9 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	
-	
-	
+
+
+
 	// Utilization
 	public WebElement getLogoutLink() {
 		return logoutLink;
@@ -33,16 +34,33 @@ public class HomePage {
 	public WebElement getCreateNewTasks() {
 		return createNewTasks;
 	}
+
 	public WebElement getSetings() {
 		return setings;
 	}
+
+
+	public WebElement getSaveLeaveTimeBtn() {
+		return saveLeaveTimeBtn;
+	}
 	
-	//generic method
-	public void sendUsername() {
+
+	
+	//operational method
+	
+	public void clickLogoutLink()
+	{
+		logoutLink.click();
 		
 	}
 	
-	//operational method
+	public void clickSaveLeaveTimeBtn()
+	{
+		saveLeaveTimeBtn.click();
+	}
+	
+	
 
+	
 
 }

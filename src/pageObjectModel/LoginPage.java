@@ -20,12 +20,11 @@ public class LoginPage {
 
 
 	// Initialization
-
-	public LoginPage(WebDriver driver) {
+	
+	public LoginPage(WebDriver driver)
+	{
 		PageFactory.initElements(driver, this);
 	}
-
-
 
 
 	// Utilization
@@ -59,11 +58,14 @@ public class LoginPage {
 		loginBtn.click();	
 	}
 	
-	public void actitimeInvalidLogin(String invalidUsername, String invalidUserPassword) {
-		usn.sendKeys(invalidUsername);
-		pass.sendKeys(invalidUserPassword);
-		loginBtn.click();
-	}
 
+	public void actitimeInvalidLogin(String invalidUserName, String invalidPassword) throws InterruptedException
+	{
+		usn.sendKeys(invalidUserName);
+		pass.sendKeys(invalidPassword);
+		loginBtn.click();
+		Thread.sleep(2000);
+		usn.clear();
+	}
 
 }

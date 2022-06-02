@@ -13,7 +13,8 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class Flib {
-	
+
+
 	public String readExcelData(String excelPath, String sheetName, int rowCount, int cellCount) throws EncryptedDocumentException, IOException
 	{
 		FileInputStream fis = new FileInputStream(excelPath);
@@ -24,7 +25,8 @@ public class Flib {
 		String data = cell.getStringCellValue();
 		return data;
 	}
-	
+
+
 	public int getRowCount(String excelPath, String sheetName) throws EncryptedDocumentException, IOException
 	{
 		FileInputStream fis = new FileInputStream(excelPath);
@@ -34,17 +36,17 @@ public class Flib {
 		return data;
 	}
 	
-	public void writeExcelCell(String excelPath, String sheetName, int rowCount, int cel, String cellVal) throws EncryptedDocumentException, IOException
-	{
-		FileInputStream fis = new FileInputStream(excelPath);
+	public void writeExcelCell(String excelFilePath, String sheetName, int rowCount, int cl, String cellVal) throws EncryptedDocumentException, IOException {
+		
+		FileInputStream fis = new FileInputStream(excelFilePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(sheetName);
 		Row row = sh.getRow(rowCount);
 		
-		Cell cell = row.createCell(cel);
-		cell.setCellValue(cellVal);
+		Cell cell = row.createCell(cl);
+		cell.setCellValue(cellVal); 
 		
-		FileOutputStream fos = new FileOutputStream(excelPath);
+		FileOutputStream fos = new FileOutputStream(excelFilePath);
 		wb.write(fos);
 		
 	}
@@ -54,9 +56,9 @@ public class Flib {
 		FileInputStream fis = new FileInputStream(propPath);
 		Properties prop = new Properties();
 		prop.load(fis);
-		
 		String data = prop.getProperty(key);
 		return data;
 	}
+
 
 }
