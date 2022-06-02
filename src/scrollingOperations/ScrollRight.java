@@ -21,6 +21,8 @@ public class ScrollRight {
 		jse.executeScript("window.scrollBy(0,1000)");
 		
 		
+		
+		
 		Thread.sleep(5000);
 		
 		// Scroll up	
