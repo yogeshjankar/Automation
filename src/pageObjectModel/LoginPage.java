@@ -20,7 +20,7 @@ public class LoginPage {
 
 
 	// Initialization
-	
+
 	public LoginPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -28,7 +28,7 @@ public class LoginPage {
 
 
 	// Utilization
-	
+
 	public WebElement getUsn() {
 		return usn;
 	}
@@ -48,23 +48,22 @@ public class LoginPage {
 	public WebElement getLicenseLink() {
 		return licenseLink;
 	}
-	
+
 	// ActiTime valid login
-	
+
 	public void actitimeValidLogin(String validUserName, String validPassword)
 	{
 		usn.sendKeys(validUserName);
 		pass.sendKeys(validPassword);
 		loginBtn.click();	
 	}
-	
+
 
 	public void actitimeInvalidLogin(String invalidUserName, String invalidPassword) throws InterruptedException
 	{
 		usn.sendKeys(invalidUserName);
 		pass.sendKeys(invalidPassword);
 		loginBtn.click();
-		Thread.sleep(2000);
 		usn.clear();
 	}
 
