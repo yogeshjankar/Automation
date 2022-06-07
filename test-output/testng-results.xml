@@ -1,47 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[sumo class method]]>
-    </line>
-    <line>
-      <![CDATA[Remo class method]]>
-    </line>
-    <line>
-      <![CDATA[demo class method]]>
-    </line>
   </reporter-output>
-  <suite started-at="2022-06-06T17:36:04 IST" name="Suite" finished-at="2022-06-06T17:36:04 IST" duration-ms="168">
+  <suite started-at="2022-06-07T14:00:40 IST" name="Suite" finished-at="2022-06-07T14:01:23 IST" duration-ms="42804">
     <groups>
     </groups>
-    <test started-at="2022-06-06T17:36:04 IST" name="Test" finished-at="2022-06-06T17:36:04 IST" duration-ms="168">
-      <class name="testngpack.Sumo">
-        <test-method signature="f()[pri:0, instance:testngpack.Sumo@65f095f8]" started-at="2022-06-06T17:36:04 IST" name="f" finished-at="2022-06-06T17:36:04 IST" duration-ms="28" status="PASS">
+    <test started-at="2022-06-07T14:00:40 IST" name="Test" finished-at="2022-06-07T14:01:23 IST" duration-ms="42804">
+      <class name="testngReadDataFromXML.ActiTimeLogin">
+        <test-method signature="actiTimeLogin(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testngReadDataFromXML.ActiTimeLogin@2cd2a21f]" started-at="2022-06-07T14:00:41 IST" name="actiTimeLogin" finished-at="2022-06-07T14:01:23 IST" duration-ms="42662" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://admin-pc:8080/login.do]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
-            <line>
-              <![CDATA[sumo class method]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- testngpack.Sumo -->
-      <class name="testngpack.Remo">
-        <test-method signature="f()[pri:0, instance:testngpack.Remo@41fecb8b]" started-at="2022-06-06T17:36:04 IST" name="f" finished-at="2022-06-06T17:36:04 IST" duration-ms="23" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Remo class method]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- testngpack.Remo -->
-      <class name="testngpack.Demo">
-        <test-method signature="a()[pri:0, instance:testngpack.Demo@120f102b]" started-at="2022-06-06T17:36:04 IST" name="a" finished-at="2022-06-06T17:36:04 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[demo class method]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- a -->
-      </class> <!-- testngpack.Demo -->
+        </test-method> <!-- actiTimeLogin -->
+      </class> <!-- testngReadDataFromXML.ActiTimeLogin -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
