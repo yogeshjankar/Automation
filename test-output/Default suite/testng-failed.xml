@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testngReadDataFromXML.ActiTimeLogin">
+      <class name="tsetngAssertion.TestNGAssertions">
         <methods>
-          <include name="actiTimeLogin"/>
+          <include name="testCase"/>
+          <include name="setProperty"/>
+          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- testngReadDataFromXML.ActiTimeLogin -->
+      </class> <!-- tsetngAssertion.TestNGAssertions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
